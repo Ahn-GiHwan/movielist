@@ -5,7 +5,7 @@ const styles = {
   borderRadius: "10px",
 };
 
-export default function Nav() {
+export default function Nav({ inputRef, onSearch }) {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light "
@@ -29,29 +29,48 @@ export default function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/" activeStyle={styles} exact>
-                HOME
+              <NavLink
+                className="nav-link"
+                to="/now_playing"
+                activeStyle={styles}
+                exact
+              >
+                Now Playing
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/sd" activeStyle={styles}>
-                HOME
+              <NavLink className="nav-link" to="/popular" activeStyle={styles}>
+                Popular
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/as" activeStyle={styles}>
-                HOME
+              <NavLink
+                className="nav-link"
+                to="/top_rated"
+                activeStyle={styles}
+              >
+                Top Rated
               </NavLink>
             </li>
           </ul>
-          <form className="d-flex">
+          <form
+            className="d-flex"
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              ref={inputRef}
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button
+              className="btn btn-outline-success"
+              type="submit"
+              onClick={onSearch}
+            >
               Search
             </button>
           </form>
