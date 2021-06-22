@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
 
 const styles = {
-  backgroundColor: "#fff",
-  borderRadius: "10px",
+  color: "#000",
+  fontWeight: "700",
 };
 
 export default function Nav({ inputRef, onSearch }) {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-light "
-      style={{ backgroundColor: "#e3f2fd" }}
+      style={{ backgroundColor: "#e3f2fd", position: "sticky" }}
     >
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">

@@ -16,12 +16,35 @@ const Title = styled.div`
   height: 80px;
 `;
 
-export default function NowPlaying({ title, datas, imgAddress, getMovie }) {
+const Paging = styled.div`
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const Card = styled.div`
+  :hover {
+    img {
+      height: 150%;
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+    cursor: pointer;
+  }
+`;
+
+export default function ShowMovie({
+  title,
+  datas,
+  totalPage,
+  imgAddress,
+  getMovie,
+  clickDetail,
+  onPage,
+}) {
   useEffect(() => {
     getMovie();
   }, [getMovie]);
-
-  // console.log(datas.results);
 
   return (
     <div className="container-sm">
@@ -34,13 +57,26 @@ export default function NowPlaying({ title, datas, imgAddress, getMovie }) {
         )}
       </H3>
       <hr />
+      <Paging>
+        <Pagination
+          current={datas.page}
+          defaultCurrent={1}
+          total={totalPage}
+          onChange={(e) => {
+            onPage(e);
+          }}
+        />
+      </Paging>
       <Cards>
         {datas.results.map((v) => {
           return (
-            <div
+            <Card
               className="card"
               style={{ maxWidth: "200px", margin: "1% 0" }}
               key={v.id}
+              onClick={() => {
+                clickDetail(v.id);
+              }}
             >
               <img
                 src={imgAddress + v.poster_path}
@@ -53,16 +89,30 @@ export default function NowPlaying({ title, datas, imgAddress, getMovie }) {
                 </Title>
                 <hr />
                 <p className="card-text">Release | {v.release_date}</p>
-                <button className="btn btn-primary" onClick={() => {}}>
-                  detail
-                </button>
+                {/* <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    clickDetail(v.id);
+                  }}
+                >
+                  Detail
+                </button> */}
               </div>
-            </div>
+            </Card>
           );
         })}
       </Cards>
       <hr />
-      <Pagination defaultCurrent={1} total={50} />
+      <Paging>
+        <Pagination
+          current={datas.page}
+          defaultCurrent={1}
+          total={totalPage}
+          onChange={(e) => {
+            onPage(e);
+          }}
+        />
+      </Paging>
     </div>
   );
 }
