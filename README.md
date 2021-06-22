@@ -15,6 +15,7 @@
 |    react-redux    | React에서 Redux를 더 편하게 사용하기 위한 Library이다                                                              |
 |    useSeletor     | react-redux의 기능으로 store에 보관된 state를 편하게 불러올 수 있다.                                               |
 |    useDispatch    | react-redux의 기능으로 action함수를 편하게 실행할 수 있다.                                                         |
+|      useRef       | input에 ref의 값으로 설정하여 변화하는 값을 계속 감지하는 것이 아닌 최종 값을 가져올 수 있다.                      |
 |     useParam      | react-router-dom의 기능으로 주소로 전달된 param값을 쉽게 가져올 수 있다.                                           |
 |    useHistory     | react-router-dom의 기능으로 설정한 component주소로 쉽게 이동할 수 있다.                                            |
 | Styled-components | component를 자체적으로 만들어 style설정을 개별로 할 수 있다.                                                       |
