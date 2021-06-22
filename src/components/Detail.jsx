@@ -87,7 +87,7 @@ export default function Detail({ datas, param, imgAddress, getMovie, onBack }) {
     "warning",
   ];
 
-  if (Number(param.id) === datas.id && datas.backdrop_path) {
+  if (Number(param.id) === datas.id) {
     return (
       <>
         <BgImg img={imgAddress + datas.backdrop_path} />

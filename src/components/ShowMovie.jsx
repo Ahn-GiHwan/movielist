@@ -9,7 +9,7 @@ const H3 = styled.h3`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 const Title = styled.div`
@@ -23,6 +23,8 @@ const Paging = styled.div`
 `;
 
 const Card = styled.div`
+  margin: 1%;
+  max-width: 150px;
   :hover {
     img {
       height: 150%;
@@ -72,7 +74,6 @@ export default function ShowMovie({
           return (
             <Card
               className="card"
-              style={{ maxWidth: "200px", margin: "1% 0" }}
               key={v.id}
               onClick={() => {
                 clickDetail(v.id);
