@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# MovieList
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 영화 정보를 알 수 있는 웹사이트이다.
 
-## Available Scripts
+## 사용스킬
 
-In the project directory, you can run:
+|       스킬        | 내용                                                                                                               |
+| :---------------: | ------------------------------------------------------------------------------------------------------------------ |
+|       Hook        | function component를 사용하여 component 생성                                                                       |
+|     useEffect     | Hook의 lifecycle로 mount순서에 따라, 혹은 변수의 변화, 함수의 사용에 따라 render를 다시 시킬 수 있다.              |
+|       Redux       | redux를 통해 state값을 통합으로 관리하여 props로 상태를 이동시키는게 아니라 store에서 바로 state값을 받을 수 있다. |
+|    Redux-thunk    | redux에서 비동기 처리를 위한 Library이다.                                                                          |
+|   Ducks-pattern   | redux의 action과 reducer를 하나로 합쳐서 개발하는 패턴이다. modules 폴더에서 통합관리                              |
+|   redux-actions   | redux의 Ducks-pattern에 맞게 개발할 수 있게 도와주는 Library이다                                                   |
+|    react-redux    | React에서 Redux를 더 편하게 사용하기 위한 Library이다                                                              |
+|    useSeletor     | react-redux의 기능으로 store에 보관된 state를 편하게 불러올 수 있다.                                               |
+|    useDispatch    | react-redux의 기능으로 action함수를 편하게 실행할 수 있다.                                                         |
+|     useParam      | react-router-dom의 기능으로 주소로 전달된 param값을 쉽게 가져올 수 있다.                                           |
+|    useHistory     | react-router-dom의 기능으로 설정한 component주소로 쉽게 이동할 수 있다.                                            |
+| Styled-components | component를 자체적으로 만들어 style설정을 개별로 할 수 있다.                                                       |
+|     bootstrap     | UI를 간편하게 구성할 수 있는 Library이다.(Nav, Cards, Buttons etc)                                                 |
+|       antd        | UI를 간편하게 구성할 수 있는 Library이다. (pagination)                                                             |
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 이미지 클릭 -> 페이지 이동
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![garo](https://github.com/Ahn-GiHwan/TodoList_react_redux/blob/master/public/todo.png?raw=true)](https://t0d01ist.netlify.app/)
