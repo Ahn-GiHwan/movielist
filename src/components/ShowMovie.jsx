@@ -24,13 +24,18 @@ const Paging = styled.div`
 
 const Card = styled.div`
   margin: 1%;
-  max-width: 150px;
+  max-width: 180px;
   :hover {
-    img {
-      height: 150%;
-      transform: scale(1.1);
-      transition: 0.3s;
+    .card-body {
+      background-color: skyblue;
+      color: white;
     }
+    .card-title {
+      color: white;
+    }
+
+    box-shadow: 10px 10px 10px gray;
+    transition: 0.3s;
     cursor: pointer;
   }
 `;
