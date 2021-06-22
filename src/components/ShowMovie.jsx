@@ -19,7 +19,7 @@ const Title = styled.div`
 const Paging = styled.div`
   padding: 20px 0;
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) => props.flex && props.flex};
 `;
 
 const Card = styled.div`
@@ -64,8 +64,9 @@ export default function ShowMovie({
         )}
       </H3>
       <hr />
-      <Paging>
+      <Paging flex="flex-end">
         <Pagination
+          simple
           current={datas.page}
           defaultCurrent={1}
           total={totalPage}
@@ -95,27 +96,21 @@ export default function ShowMovie({
                 </Title>
                 <hr />
                 <p className="card-text">Release | {v.release_date}</p>
-                {/* <button
-                  className="btn btn-primary"
-                  onClick={() => {
-                    clickDetail(v.id);
-                  }}
-                >
-                  Detail
-                </button> */}
               </div>
             </Card>
           );
         })}
       </Cards>
       <hr />
-      <Paging>
+      <Paging flex="center">
         <Pagination
+          showSizeChanger={null}
           current={datas.page}
           defaultCurrent={1}
           total={totalPage}
           onChange={(e) => {
             onPage(e);
+            window.scrollTo(0, 0);
           }}
         />
       </Paging>
